@@ -1,0 +1,26 @@
+{
+  "name": "lab03",
+  "version": "1.0.0",
+  "description": "Lab 03 - Node.js HTTP Server with Employee Module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "node",
+    "http",
+    "server",
+    "employee",
+    "lab03"
+  ],
+  "author": {
+    "name": "Pritesh Patel",
+    "email": "sample@gb.ca"
+  },
+  "homepage": "https://nodejs.org/",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
