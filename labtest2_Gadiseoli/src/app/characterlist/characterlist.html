@@ -1,0 +1,32 @@
+<div class="container">
+    <h2>Harry Potter Characters</h2>
+    <p>Total characters: {{ filteredCharacters.length }}</p>
+
+    <mat-form-field appearance="outline" class="search-field">
+        <mat-label>Search character</mat-label>
+        <input 
+            matInput
+            type="text"
+            placeholder="Search character..."
+            [(ngModel)]="searchText"
+            (input)="search()"
+        />
+    </mat-form-field>
+
+    <app-characterfilter (houseSelected)="filterByHouse($event)"></app-characterfilter>
+
+    <app-characterdetails [character]="selectedCharacter()"></app-characterdetails>
+
+    @for (char of filteredCharacters; track $index) {
+        <mat-card class="card" (click)="showDetails(char)">
+            <h3>{{ char.name }}</h3>
+            <p>{{ char.house }}</p>
+            <img [src]="char.image" width="100" />
+        </mat-card>
+    }
+
+
+</div>
+
+
+

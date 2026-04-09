@@ -1,0 +1,11 @@
+<div class="filter-container">
+    <mat-form-field appearance="outline">
+        <mat-label>Filter by House: </mat-label>
+        <mat-select [(ngModel)]="selectedHouse" (selectionChange)="onHouseChange()">
+            <mat-option value="">All Houses</mat-option>
+             @for (house of houses; track $index) {
+            <mat-option [value]="house">{{ house }}</mat-option>
+            }
+        </mat-select>
+    </mat-form-field>
+</div>

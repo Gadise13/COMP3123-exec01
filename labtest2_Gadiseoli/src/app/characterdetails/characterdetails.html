@@ -1,0 +1,36 @@
+
+@if (character) {
+    <div class="details-card">
+        <h2>{{ character.name }}</h2>
+
+        <img [src]="character.image" width="180" />
+
+        <p><strong>Species:</strong> {{ character.species }}</p>
+
+        @switch (character.house) {
+            @case ('Gryffindor') {
+                <p><strong>House:</strong> Gryffindor</p>
+            }
+            @case ('Slytherin') {
+                <p><strong>House:</strong> Slytherin</p>
+            }
+            @case ('Hufflepuff') {
+                <p><strong>House:</strong> Hufflepuff</p>
+            }
+            @case ('Ravenclaw') {
+                <p><strong>House:</strong> Ravenclaw</p>
+            }
+            @default {
+                <p><strong>House:</strong> No House</p>
+            }
+        }
+        
+        <p><strong>Wizard:</strong> {{ character.wizard }}</p>
+        <p><strong>Ancestry:</strong> {{ character.ancestry }}</p>
+        <p><strong>Actor:</strong> {{ character.actor }}</p>
+
+        <p><strong>Wand Wood:</strong> {{ character.wand.wood }}</p>
+        <p><strong>Wand Core:</strong> {{ character.wand.core }}</p>
+        <p><strong>Wand Length:</strong> {{ character.wand.length }}</p>
+    </div>
+}
